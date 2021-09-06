@@ -201,7 +201,7 @@ jobs:
         echo ${{ env.date4 }} > version.txt
         mv sha256sums ${{matrix.target}}_sha256sums
         rename -v "s/^openwrt/${{ env.date3 }}-openwrt/" *
-        rename -v "s/xiaomi_redmi-router/redmi/" *bin
+        rename -v "s/xiaomi_mi4a-router/xiaomi/" *bin
         rename -v "s/(d-team_|xiaoyu_)//" *bin
         rename -v "s/friendlyarm_//" *gz
         echo "FIRMWARE=$PWD" >> $GITHUB_ENV
